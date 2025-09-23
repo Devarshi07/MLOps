@@ -8,5 +8,5 @@ fastapi_lab1/model/f1_model.pkl
 
 # Ignore cache
 __pycache__/
-f1_cache/
+
 
