@@ -138,6 +138,6 @@ def evaluate_models(ti):
     cm = confusion_matrix(actual_results, pred_results, labels=["H", "D", "A"])
     
     print("\n--- Final Match Outcome Prediction ---")
-    print(f"✅ Accuracy: {accuracy:.2%}")
+    print(f"Accuracy: {accuracy:.2%}")
     print("Confusion Matrix (Rows=Actual, Cols=Predicted: H, D, A):")
     print(cm)
