@@ -1,0 +1,41 @@
+[2025-10-07T02:28:09.131+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-10-07T02:28:09.132+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-10-07T02:28:09.132+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-10-07T02:28:09.132+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-10-07T02:28:09.144+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-10-07T02:28:09.208+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/airflow.py     73  0.03s             0           0
+/opt/airflow/dags/src/lab.py     72  0.04s             0           0
+================================================================================
+[2025-10-07T02:28:39.741+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/airflow.py                           1           0  2.48s           2025-10-07T02:28:11
+/opt/airflow/dags/src/lab.py                           0           0  2.33s           2025-10-07T02:28:11
+================================================================================
+[2025-10-07T02:29:09.805+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/airflow.py                           1           0  0.71s           2025-10-07T02:28:42
+/opt/airflow/dags/src/lab.py                           0           0  0.70s           2025-10-07T02:28:42
+================================================================================
+[2025-10-07T02:29:40.782+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/src/lab.py                           0           0  0.73s           2025-10-07T02:29:13
+/opt/airflow/dags/airflow.py                           1           0  0.71s           2025-10-07T02:29:13
+================================================================================
