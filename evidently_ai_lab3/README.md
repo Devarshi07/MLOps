@@ -28,12 +28,32 @@ Evidently AI computes drift metrics for each feature and provides interactive vi
 
 The **Student Performance** dataset (UCI ID: 856) contains academic and behavioral data for 145 students with 32 features, including:
 
-- **Categorical variables:** e.g., “Graduated high-school type”, “Additional work”, “Do you have a partner?”
-- **Numerical variables:** e.g., “Student Age”, “Total salary if available”, “Taking notes in classes”.
+| Feature | Type | Description |
+|----------|------|-------------|
+| **Student Age** | Numerical | Encoded age of the student. |
+| **Sex** | Categorical | Gender of the student (1 = Male, 2 = Female). |
+| **Graduated high-school type** | Categorical | Type of high school attended before university. |
+| **Scholarship type** | Categorical | Type of financial aid received, if any. |
+| **Additional work** | Categorical | Whether the student is working part-time (1 = No, 2 = Yes). |
+| **Regular artistic or sports activity** | Categorical | Participation in extracurricular activities. |
+| **Do you have a partner** | Categorical | Relationship status (1 = No, 2 = Yes). |
+| **Total salary if available** | Numerical | Reported total monthly salary. |
+| **Transportation to university** | Categorical | Mode of commute (e.g., walking, car, public transport). |
+| **Preparation to midterm exams 1 & 2** | Categorical | Self-reported preparation effort before exams. |
+| **Taking notes in classes** | Numerical | Frequency of note-taking during lectures. |
+| **Listening in classes** | Numerical | Level of attentiveness in lectures. |
+| **Flip-classroom participation** | Categorical | Whether student engages in flipped classroom sessions. |
+| **Cumulative GPA (last semester)** | Numerical | Last semester’s GPA (scaled 1–4). |
+| **Expected GPA (graduation)** | Numerical | Anticipated GPA at graduation. |
 
 For this analysis:
 - `ref_data` = subset where `Sex == 1`
 - `prod_data` = subset where `Sex == 2`
+
+
+The **Student Performance Dataset** captures demographic, academic, and behavioral data of 145 students studying in Cyprus.  
+Each record represents one student, with attributes covering family background, study habits, and academic expectations.
+
 
 ---
 
@@ -89,10 +109,29 @@ report.save_html("data_drift_report.html")
 ```
 
 ## 💡 Key Insights
+---
 
-- A significant drift (77%) was detected, indicating that the student data distributions differ notably between genders.
-- Such drift may affect model fairness or prediction accuracy in downstream ML applications.
-- Evidently AI provides an automated and explainable way to monitor these changes over time.
+## 🔍 Detailed Results and Insights
+
+### 🧮 Statistical Summary
+- The Evidently AI report analyzed 22 selected columns and identified **data drift in 17 (77.27%)** of them.  
+- The **dataset drift threshold** was set to **0.5**, and the computed drift share of **0.773** confirmed substantial distributional change.
+
+### ⚖️ Feature-Level Drift Highlights
+- **Graduated high-school type** and **Father’s education** showed strong categorical drift, suggesting possible demographic imbalance.
+- **Additional work** and **Preparation to midterm exams 1 & 2** reflected behavioral or academic engagement differences.
+- Numerical features such as **Student Age** and **Listening in classes** exhibited moderate drift, highlighting variation in engagement or maturity between genders.
+
+### 📈 Visual Analysis
+- **Histograms** illustrated distribution shifts in numerical features (e.g., “Student Age”, “Taking notes in classes”).
+- **Boxplots** revealed differences in score spreads, with females tending to report higher consistency in class attentiveness and exam preparation metrics.
+
+
+#### Evidently’s `DataDriftPreset()` applies statistical tests such as:
+- **Chi-square test** for categorical variables.
+- **Kolmogorov–Smirnov (KS)** or **Z-test** for numerical variables.  
+These tests compare feature distributions to flag significant changes.
+
 
 ## 🚀 Future Scope
 
