@@ -104,7 +104,7 @@ report.save_html("data_drift_report.html")
 
 - Devarshi Mahajan
 - M.S. in Data Analytics Engineering, Northeastern University
-📧 [mahajan.dev@northeastern.edu](mailto:mahajan.dev@northeastern.edu) | 🌐 [GitHub Profile](https://github.com/devarshimahajan)
+📧 [mahajan.dev@northeastern.edu](mailto:mahajan.dev@northeastern.edu) | 🌐 [GitHub Profile](https://github.com/devarshi07)
 
 ## 🧾 References
 
