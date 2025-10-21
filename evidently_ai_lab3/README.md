@@ -77,6 +77,25 @@ Each record represents one student, with attributes covering family background, 
 
 ---
 
+## 🧩 Modifications from the Original Lab
+
+This project was **adapted** from the original MLOps lab notebook which analyzed **data drift using the Adult Income dataset**.
+
+| Original Implementation | Modified Version (This Project) |
+|--------------------------|---------------------------------|
+| Dataset: `adult` (OpenML) | Dataset: `student performance` (UCI ML Repo, ID 856) |
+| Features: age, education, occupation, income | Features: study habits, demographics, GPA, etc. |
+| Data split: based on education level | Data split: based on gender (`Sex == 1` vs `Sex == 2`) |
+| Output: Evidently drift dashboard only | Output: Evidently dashboard + Matplotlib histograms & boxplots |
+| No visual EDA | Added **feature distribution comparison plots** for numeric variables |
+
+**Additional Enhancements:**
+- Introduced visualization section using `plt.hist()` and `plt.boxplot()` to show side-by-side reference vs. production distributions.  
+- Added feature summary and dataset schema definition using Evidently’s `DataDefinition`.  
+- Improved interpretability through expanded documentation and feature explanations.
+
+---
+
 ## 📊 Results
 
 - **Total Columns:** 22  
